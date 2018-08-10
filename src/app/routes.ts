@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { ContactComponent } from './contact/contact.component';
-import { ConsultingComponent } from './consulting/consulting.component';
-import { ProcessAnalysisComponent } from './process-analysis/process-analysis.component';
-import { TroubleShootingComponent } from './trouble-shooting/trouble-shooting.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ConsultingComponent } from './components/consulting/consulting.component';
+import { ProcessAnalysisComponent } from './components/process-analysis/process-analysis.component';
+import { TroubleShootingComponent } from './components/trouble-shooting/trouble-shooting.component';
 
 export const appRoutes: Routes = [
     { path: 'home', component: HomeComponent },

@@ -5,23 +5,21 @@ import { RouterModule } from '../../node_modules/@angular/router';
 import { BsDropdownModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
-import { ValueComponent } from './value/value.component';
-import { NavComponent } from './nav/nav.component';
-import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ProjectsComponent } from './projects/projects.component';
+import { NavComponent } from './components/nav/nav.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 import { appRoutes } from './routes';
-import { ContactComponent } from './contact/contact.component';
-import { ConsultingComponent } from './consulting/consulting.component';
-import { ProcessAnalysisComponent } from './process-analysis/process-analysis.component';
-import { TroubleShootingComponent } from './trouble-shooting/trouble-shooting.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ConsultingComponent } from './components/consulting/consulting.component';
+import { ProcessAnalysisComponent } from './components/process-analysis/process-analysis.component';
+import { TroubleShootingComponent } from './components/trouble-shooting/trouble-shooting.component';
 
 
 @NgModule({
    declarations: [
       AppComponent,
-      ValueComponent,
       NavComponent,
       FooterComponent,
       HomeComponent,

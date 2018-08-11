@@ -1,0 +1,20 @@
+<main role="main" class="container">
+    <div class="row">
+      <div class="col-md-8 blog-main">
+        <h3 class="pb-3 mb-4 font-italic border-bottom">
+          {{ blogpost.title }}
+        </h3>
+      </div>  
+    </div>  
+
+    <div class="blog-post">
+        <h2 class="blog-post-title">{{ blogpost.description }}</h2>
+        <h4>Category: {{ blogpost.category }}</h4>
+        <p class="blog-post-meta">{{ blogpost.dateCreated | date }} by <a href="#">{{ blogpost.author }}</a></p>
+        <hr>
+        <p>
+           {{ blogpost.body }}           
+        </p>
+      </div><!-- /.blog-post -->
+
+</main>  

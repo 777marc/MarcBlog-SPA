@@ -6,6 +6,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ConsultingComponent } from './components/consulting/consulting.component';
 import { ProcessAnalysisComponent } from './components/process-analysis/process-analysis.component';
 import { TroubleShootingComponent } from './components/trouble-shooting/trouble-shooting.component';
+import { BlogpostComponent } from 'src/app/components/blogpost/view/blogpost.component';
 
 export const appRoutes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -15,5 +16,6 @@ export const appRoutes: Routes = [
     { path: 'consulting', component: ConsultingComponent },
     { path: 'process-analysis', component: ProcessAnalysisComponent },
     { path: 'trouble-shooting', component: TroubleShootingComponent },
+    { path: 'blogpost/:id', component: BlogpostComponent },
     { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];

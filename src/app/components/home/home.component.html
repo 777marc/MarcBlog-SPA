@@ -1,4 +1,4 @@
-<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark bgimg">
+<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
     <div class="col-md-6 px-0">
         <h1 class="display-4 font-italic">{{ post?.title }}</h1>
         <p class="lead my-3">{{ post?.description }}</p>
@@ -13,41 +13,23 @@
 
 
 <div class="row mb-2">
-        <div class="col-md-6" *ngFor="let blogpost of posts">
-          <div class="card flex-md-row mb-4 shadow-sm h-md-250">
-            <div class="card-body d-flex flex-column align-items-start">
-              <strong class="d-inline-block mb-2 text-primary">{{ blogpost.category }}</strong>
-              <h3 class="mb-0">
-                {{blogpost.title}}
-              </h3>
-            <div class="mb-1 text-muted">{{blogpost.dateCreated | date}}</div>
-              <p class="card-text mb-auto">{{blogpost.description}}</p>
-              <a routerLink="/blogpost/{{ blogpost?.id }}"
-                class="text-gray font-weight-bold">
-                Continue reading...
-              </a>
-             </div>
-            <img src="../../assets/images/stream.JPG" alt="stream" style="height: 50%; width: 50%;" >
+    <div class="col-md-6" *ngFor="let blogpost of posts">
+      <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+        <div class="card-body d-flex flex-column align-items-start">
+          <strong class="d-inline-block mb-2 text-primary">{{ blogpost.category }}</strong>
+          <h3 class="mb-0">
+            {{blogpost.title}}
+          </h3>
+        <div class="mb-1 text-muted">{{blogpost.dateCreated | date}}</div>
+          <p class="card-text mb-auto">{{blogpost.description}}</p>
+          <a routerLink="/blogpost/{{ blogpost?.id }}"
+            class="text-gray font-weight-bold">
+            Continue reading...
+          </a>
           </div>
-        </div>
-
-        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@christopher__burns?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Christopher Burns"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Christopher Burns</span></a>
-
-
-        <!-- <div class="col-md-6">
-          <div class="card flex-md-row mb-4 shadow-sm h-md-250">
-            <div class="card-body d-flex flex-column align-items-start">
-              <strong class="d-inline-block mb-2 text-success">Design</strong>
-              <h3 class="mb-0">
-                <a class="text-dark" href="#">Post title</a>
-              </h3>
-              <div class="mb-1 text-muted">Nov 11</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#">Continue reading</a>
-            </div>
-            <img src="../../assets/images/stream.JPG" alt="stream" style="height: 50%; width: 50%;" >
-          </div>
-        </div> -->
+          <img src="../../assets/images/stream.JPG" alt="stream" style="height: 50%; width: 50%;" >
+      </div>
+    </div>
 </div>
 
 <main role="main" class="container">

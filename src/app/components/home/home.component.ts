@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BlogpostService } from '../../../_services/blogpost.service';
-import { Blogpost } from '../../../_models/Blogpost';
+import { BlogpostService } from '../../_services/blogpost.service';
+import { Blogpost } from '../../_models/Blogpost';
 import { positionElements } from 'ngx-bootstrap/positioning/ng-positioning';
 
 @Component({

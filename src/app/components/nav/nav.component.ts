@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/_services/auth.service';
-import { getISODayOfWeek } from 'ngx-bootstrap/chronos/units/day-of-week';
+import { Router } from '@angular/router';
+import { AlertifyService } from 'src/app/_services/alertify.service';
 
 @Component({
   selector: 'app-nav',
@@ -11,7 +12,7 @@ export class NavComponent implements OnInit {
 
   model: any ={};
 
-  constructor(private authService : AuthService) { }
+  constructor(private authService : AuthService, private router: Router, private alertify: AlertifyService) { }
 
   ngOnInit() {
   }
@@ -31,7 +32,8 @@ export class NavComponent implements OnInit {
 
   logout() {
     localStorage.removeItem('token');
-    console.log('logged out');
+    this.alertify.message('You are logged out.');
+    this.router.navigate(['/home']);
   }
 
 }

@@ -1,3 +1,36 @@
-<p>
-  newblogpost works!
-</p>
+<div class="container">
+  <p>New Blog Post</p>
+  <div class="input-group">
+      <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Title</span>
+          </div>
+          <input type="text" 
+                 class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"
+                 [(ngModel)]="model.title">
+      </div>
+      <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Description</span>
+          </div>
+          <input type="text" 
+                 class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"
+                 [(ngModel)]="model.description">
+      </div>
+      <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Category</span>
+          </div>
+          <input type="text" 
+                 class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"
+                 [(ngModel)]="model.category">
+      </div>
+      <div class="input-group-prepend">
+        <span class="input-group-text">Blog Post</span>
+      </div>
+      <textarea class="form-control" aria-label="With textarea"
+                [(ngModel)]="model.body"></textarea>
+      <br>
+      <button type="button" class="btn btn-success" (click)="submitPost()">Submit Post</button>
+    </div>
+</div>

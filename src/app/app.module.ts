@@ -18,6 +18,11 @@ import { ConsultingComponent } from './components/consulting/consulting.componen
 import { BlogpostService } from '../app/_services/blogpost.service';
 import { BlogpostComponent } from 'src/app/components/blogpost/view/blogpost.component';
 import { AuthService } from 'src/app/_services/auth.service';
+import { AdminComponent } from 'src/app/components/admin/admin.component';
+import { LoginComponent } from 'src/app/components/admin/login/login.component';
+import { AlertifyService } from 'src/app/_services/alertify.service';
+import { AuthGuard } from 'src/app/_guards/auth.guard';
+import { NewblogpostComponent } from 'src/app/components/blogpost/new/newblogpost.component';
 
 @NgModule({
    declarations: [
@@ -29,7 +34,10 @@ import { AuthService } from 'src/app/_services/auth.service';
       ProjectsComponent,
       ContactComponent,
       ConsultingComponent,
-      BlogpostComponent
+      BlogpostComponent,
+      AdminComponent,
+      LoginComponent,
+      NewblogpostComponent
    ],
    imports: [
       BrowserModule,
@@ -41,7 +49,9 @@ import { AuthService } from 'src/app/_services/auth.service';
    ],
    providers: [
        BlogpostService,
-       AuthService
+       AuthService,
+       AlertifyService,
+       AuthGuard
    ],
    bootstrap: [
       AppComponent

@@ -1,27 +1,33 @@
 import { Injectable, Inject } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 import { Http, RequestOptions, Headers } from '@angular/http';
 import { Blogpost } from '../_models/Blogpost';
+import 'rxjs/add/operator/catch';
+import { Observable } from "rxjs/Observable";
 
 @Injectable({
   providedIn: 'root'
 })
 export class BlogpostService {
+  
+  private baseUrl : string;
 
-  public http : Http;
-  public baseUrl : string;
-
-  constructor(http: Http) { 
-    this.http = http;
-    this.baseUrl = 'http://localhost:5000/';
+  constructor(private http: Http) { 
+    this.baseUrl = 'http://localhost:5000/api/';
   }
 
   getPosts() {
-    return this.http.get(this.baseUrl + 'api/blogposts');
+    return this.http.get(this.baseUrl + 'blogposts');
   }
 
   getPost(id: number) {
-    return this.http.get(this.baseUrl + 'api/blogposts/' + id.toString());
+    return this.http.get(this.baseUrl + 'blogposts/' + id.toString());
   }
 
+  addNewPost(model: Blogpost) {
+    let body = JSON.stringify(model);
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    headers.append('Accept', 'application/json');
+    let options = new RequestOptions({ headers: headers });
+    return this.http.post(this.baseUrl + 'blogposts', body, options).catch((error:any) => Observable.throw(error.json().error)).subscribe();
+  }
 }

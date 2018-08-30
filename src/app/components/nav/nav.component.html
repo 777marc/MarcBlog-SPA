@@ -1,22 +1,30 @@
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" [routerLink]="['/home']" routerLinkActive="router-link-active" >ASI</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto list-inline">
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['/about']">About<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item" routerLinkActive="active" >
-          <a class="nav-link" [routerLink]="['/projects']">Projects</a>
-        </li>
-        <li class="nav-item" routerLinkActive="active" >
-          <a class="nav-link" [routerLink]="['/consulting']">Consulting</a>
-        </li>
-        <li class="nav-item" routerLinkActive="active" >
-            <a class="nav-link" [routerLink]="['/contact']">Contact</a>
-        </li>
-      </ul>
+<nav class="navbar navbar-expand-md main-nav fixed-top bg-light">
+    <div class="container">
+      <a class="navbar-brand white"
+        [routerLink]="['/home']">
+        <i class="fa fa-home"></i>
+      </a>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" 
+                [scrollTo]="'#about'" [scrollDuration]="800" [scrollOffset]="0"
+                >About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" 
+                [scrollTo]="'#projects'" [scrollDuration]="800" [scrollOffset]="0"
+                >Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" 
+              [scrollTo]="'#signup'" [scrollDuration]="800" [scrollOffset]="0"
+                >Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
+
+
+  

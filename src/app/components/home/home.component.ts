@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
 
   public posts: Blogpost[];
   public post: Blogpost;
+  public post2: Blogpost;
 
   constructor(private blogpostService:  BlogpostService) { }
 
@@ -23,6 +24,7 @@ export class HomeComponent implements OnInit {
     this.blogpostService.getPosts().subscribe(result => {
       this.posts = result.json();
       this.post = this.posts[0];
+      this.post2 = this.posts[1];
     }, error => {
       console.log(error);
     });

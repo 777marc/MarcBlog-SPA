@@ -23,6 +23,7 @@ import { LoginComponent } from 'src/app/components/admin/login/login.component';
 import { AlertifyService } from 'src/app/_services/alertify.service';
 import { AuthGuard } from 'src/app/_guards/auth.guard';
 import { NewblogpostComponent } from 'src/app/components/blogpost/new/newblogpost.component';
+import { ScrollToModule } from 'ng2-scroll-to-el';
 
 @NgModule({
    declarations: [
@@ -45,7 +46,8 @@ import { NewblogpostComponent } from 'src/app/components/blogpost/new/newblogpos
       HttpModule,
       RouterModule.forRoot(appRoutes),
       BsDropdownModule.forRoot(),
-      FormsModule
+      FormsModule,
+      ScrollToModule.forRoot()
    ],
    providers: [
        BlogpostService,

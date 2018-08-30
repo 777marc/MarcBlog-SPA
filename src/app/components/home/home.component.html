@@ -1,146 +1,169 @@
+<!-- Header -->
+<header id="home" class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+    <div class="mx-auto text-center">
+        <h1 class="mx-auto my-0 text-uppercase">ASC</h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">almina software consultants</h2>
+        <a class="btn btn-primary"
+            [scrollTo]="'#about'" [scrollDuration]="1000" [scrollOffset]="0"
+            >Get Started</a>
+    </div>
+    </div>
+</header>
 
-<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark bgimg">
-    <div class="col-md-6 px-0">
-        <h1 class="display-4 font-italic">{{ post?.title }}</h1>
-        <p class="lead my-3">{{ post?.description }}</p>
-        <p class="lead mb-0">
-          <a routerLink="/blogpost/{{ post?.id }}"
-             class="text-white font-weight-bold">
-          Continue reading...
-          </a>
+<!-- About Section -->
+<section id="about" class="about-section text-center">
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+        <h2 class="text-white mb-4">We're here to help.</h2>
+        <p class="text-white-50">We will take the time to review your processes and needs and find the best solution for your business.
+            <a class="nav-link" [routerLink]="['/about']">Learn more about us</a> 
         </p>
+        </div>
     </div>
-</div>
-
-<div class="row mb-2">
-    <div class="col-md-6" *ngFor="let blogpost of posts">
-      <div class="card flex-md-row mb-4 shadow-sm h-md-250">
-        <div class="card-body d-flex flex-column align-items-start">
-          <strong class="d-inline-block mb-2 text-primary">{{ blogpost.category }}</strong>
-          <h3 class="mb-0">
-            {{blogpost.title}}
-          </h3>
-        <div class="mb-1 text-muted">{{blogpost.dateCreated | date}}</div>
-          <p class="card-text mb-auto">{{blogpost.description}}</p>
-          <a routerLink="/blogpost/{{ blogpost?.id }}"
-            class="text-gray font-weight-bold">
-            Continue reading...
-          </a>
-          </div>
-          <img src="../../assets/images/stream.JPG" alt="stream" style="height: 50%; width: 50%;" >
-      </div>
+    <img src="../assets/images/ipad.png" class="img-fluid" alt="">
     </div>
-</div>
+</section>
 
-<main role="main" class="container">
-        <div class="row">
-          <div class="col-md-8 blog-main">
-            <h3 class="pb-3 mb-4 font-italic border-bottom">
-              From the Firehose
-            </h3>
-  
-            <div class="blog-post">
-              <h2 class="blog-post-title">Sample blog post</h2>
-              <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
-  
-              <p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
-              <hr>
-              <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
-              <blockquote>
-                <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              </blockquote>
-              <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-              <h2>Heading</h2>
-              <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-              <h3>Sub-heading</h3>
-              <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-              <pre><code>Example code block</code></pre>
-              <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-              <h3>Sub-heading</h3>
-              <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-              <ul>
-                <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-                <li>Donec id elit non mi porta gravida at eget metus.</li>
-                <li>Nulla vitae elit libero, a pharetra augue.</li>
-              </ul>
-              <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-              <ol>
-                <li>Vestibulum id ligula porta felis euismod semper.</li>
-                <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
-                <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
-              </ol>
-              <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
-            </div><!-- /.blog-post -->
-  
-            <div class="blog-post">
-              <h2 class="blog-post-title">Another blog post</h2>
-              <p class="blog-post-meta">December 23, 2013 by <a href="#">Jacob</a></p>
-  
-              <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
-              <blockquote>
-                <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              </blockquote>
-              <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-              <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-            </div><!-- /.blog-post -->
-  
-            <div class="blog-post">
-              <h2 class="blog-post-title">New feature</h2>
-              <p class="blog-post-meta">December 14, 2013 by <a href="#">Chris</a></p>
-  
-              <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-              <ul>
-                <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-                <li>Donec id elit non mi porta gravida at eget metus.</li>
-                <li>Nulla vitae elit libero, a pharetra augue.</li>
-              </ul>
-              <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-              <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-            </div><!-- /.blog-post -->
-  
-            <nav class="blog-pagination">
-              <a class="btn btn-outline-primary" href="#">Older</a>
-              <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
-            </nav>
-  
-          </div><!-- /.blog-main -->
-  
-          <aside class="col-md-4 blog-sidebar">
-            <div class="p-3 mb-3 bg-light rounded">
-              <h4 class="font-italic">About</h4>
-              <p class="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            </div>
-  
-            <div class="p-3">
-              <h4 class="font-italic">Archives</h4>
-              <ol class="list-unstyled mb-0">
-                <li><a href="#">March 2014</a></li>
-                <li><a href="#">February 2014</a></li>
-                <li><a href="#">January 2014</a></li>
-                <li><a href="#">December 2013</a></li>
-                <li><a href="#">November 2013</a></li>
-                <li><a href="#">October 2013</a></li>
-                <li><a href="#">September 2013</a></li>
-                <li><a href="#">August 2013</a></li>
-                <li><a href="#">July 2013</a></li>
-                <li><a href="#">June 2013</a></li>
-                <li><a href="#">May 2013</a></li>
-                <li><a href="#">April 2013</a></li>
-              </ol>
-            </div>
-  
-            <div class="p-3">
-              <h4 class="font-italic">Elsewhere</h4>
-              <ol class="list-unstyled">
-                <li><a href="#">GitHub</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Facebook</a></li>
-              </ol>
-            </div>
-          </aside><!-- /.blog-sidebar -->
-  
-        </div><!-- /.row -->
-  
-      </main><!-- /.container -->
+<!-- Projects Section -->
+<section id="projects" class="projects-section bg-light">
+    <div class="container">
 
-      
+    <!-- Featured Project Row -->
+    <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-xl-8 col-lg-7">
+        <img class="img-fluid mb-3 mb-lg-0" src="../assets/images/bg-masthead.jpg" alt="">
+        </div>
+        <div class="col-xl-4 col-lg-5">
+        <div class="featured-text text-center text-lg-left">
+            <h4>Shoreline</h4>
+            <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
+        </div>
+        </div>
+    </div>
+
+    <!-- Project One Row -->
+    <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-6">
+        <img class="img-fluid" src="../assets/images/demo-image-01.jpg" alt="">
+        </div>
+        <div class="col-lg-6">
+        <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+            <div class="project-text w-100 my-auto text-center text-lg-left">
+                <h4 class="text-white">Misty</h4>
+                <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+                <hr class="d-none d-lg-block mb-0 ml-0">
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Project Two Row -->
+    <div class="row justify-content-center no-gutters">
+        <div class="col-lg-6">
+        <img class="img-fluid" src="../assets/images/demo-image-02.jpg" alt="">
+        </div>
+        <div class="col-lg-6 order-lg-first">
+        <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+            <div class="project-text w-100 my-auto text-center text-lg-right">
+                <h4 class="text-white">Mountains</h4>
+                <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well, try this theme on a small screen!</p>
+                <hr class="d-none d-lg-block mb-0 mr-0">
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    </div>
+</section>
+
+<!-- Signup Section -->
+<section id="signup" class="signup-section">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+        <i class="fa fa-paper-plane fa-2x mb-2 text-white"></i>
+        <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+
+        <form class="form-inline d-flex">
+            <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
+            <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>
+        </form>
+
+        </div>
+    </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section bg-black">
+    <div class="container">
+
+    <div class="row">
+
+        <div class="col-md-4 mb-3 mb-md-0">
+        <div class="card py-4 h-100">
+            <div class="card-body text-center">
+            <i class="fa fa-map-marked-alt"></i>
+            <h4 class="text-uppercase m-0">Address</h4>
+            <hr class="my-4">
+            <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+        <div class="card py-4 h-100">
+            <div class="card-body text-center">
+            <i class="fa fa-envelope"></i>
+            <h4 class="text-uppercase m-0">Email</h4>
+            <hr class="my-4">
+            <div class="small text-black-50">
+                <a href="#">hello@yourdomain.com</a>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+        <div class="card py-4 h-100">
+            <div class="card-body text-center">
+            <i class="fa fa-mobile-alt"></i>
+            <h4 class="text-uppercase m-0">Phone</h4>
+            <hr class="my-4">
+            <div class="small text-black-50">+1 (555) 902-8832</div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="social d-flex justify-content-center">
+        <a href="#" class="mx-2">
+        <i class="fa fa-twitter"></i>
+        </a>
+        <a href="#" class="mx-2">
+        <i class="fa fa-facebook-f"></i>
+        </a>
+        <a href="#" class="mx-2">
+        <i class="fa fa-github"></i>
+        </a>
+    </div>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black small text-center text-white-50">
+    <div class="container">
+    Copyright &copy; Your Website 2018
+    </div>
+</footer>
+
+
+    

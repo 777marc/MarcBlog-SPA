@@ -19,14 +19,13 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
+              "src/asidev.ico",
               "src/assets"
             ],
             "styles": [
               "src/styles.css",
               "node_modules/alertifyjs/build/css/alertify.min.css",
-              "node_modules/alertifyjs/build/css/themes/bootstrap.min.css",
-              "src/assets/css/grayscale.css"
+              "node_modules/alertifyjs/build/css/themes/bootstrap.min.css"
             ],
             "scripts": [
               "node_modules/alertifyjs/build/alertify.min.js"
@@ -81,7 +80,7 @@
             ],
             "scripts": [],
             "assets": [
-              "src/favicon.ico",
+              "src/asidev.ico",
               "src/assets"
             ]
           }

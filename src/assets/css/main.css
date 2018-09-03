@@ -1,0 +1,15 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("../images/bg-masthead.jpg");
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

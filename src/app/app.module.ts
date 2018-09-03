@@ -8,13 +8,11 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { appRoutes } from './routes';
 import { ContactComponent } from './components/contact/contact.component';
-import { ConsultingComponent } from './components/consulting/consulting.component';
 import { BlogpostService } from '../app/_services/blogpost.service';
 import { BlogpostComponent } from 'src/app/components/blogpost/view/blogpost.component';
 import { AuthService } from 'src/app/_services/auth.service';
@@ -24,21 +22,21 @@ import { AlertifyService } from 'src/app/_services/alertify.service';
 import { AuthGuard } from 'src/app/_guards/auth.guard';
 import { NewblogpostComponent } from 'src/app/components/blogpost/new/newblogpost.component';
 import { ScrollToModule } from 'ng2-scroll-to-el';
+import { ServicesComponent } from 'src/app/components/services/services.component';
 
 @NgModule({
    declarations: [
       AppComponent,
       NavComponent,
-      FooterComponent,
       HomeComponent,
       AboutComponent,
       ProjectsComponent,
       ContactComponent,
-      ConsultingComponent,
       BlogpostComponent,
       AdminComponent,
       LoginComponent,
-      NewblogpostComponent
+      NewblogpostComponent,
+      ServicesComponent
    ],
    imports: [
       BrowserModule,

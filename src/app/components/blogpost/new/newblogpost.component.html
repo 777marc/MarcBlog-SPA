@@ -25,12 +25,9 @@
                  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"
                  [(ngModel)]="model.category">
       </div>
-      <div class="input-group-prepend">
-        <span class="input-group-text">Blog Post</span>
-      </div>
-      <textarea class="form-control" aria-label="With textarea"
-                [(ngModel)]="model.body"></textarea>
-      <br>
+
+      <app-ngx-editor [placeholder]="'Enter text here...'" [spellcheck]="true" [(ngModel)]="model.body"></app-ngx-editor>
+      
       <button type="button" class="btn btn-success" (click)="submitPost()">Submit Post</button>
     </div>
 </div>

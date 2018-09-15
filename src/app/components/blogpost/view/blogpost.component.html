@@ -12,7 +12,5 @@
     <h4>Category: {{ blogpost?.category }}</h4>
     <p class="blog-post-meta">{{ blogpost?.dateCreated | date }} by <a href="#">{{ blogpost?.author }}</a></p>
     <hr>
-    <p>
-        {{ blogpost?.body }}           
-    </p>
+    <div [innerHTML]="blogpost?.body"></div>
 </div>

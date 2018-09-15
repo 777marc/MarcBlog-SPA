@@ -23,6 +23,7 @@ import { AuthGuard } from 'src/app/_guards/auth.guard';
 import { NewblogpostComponent } from 'src/app/components/blogpost/new/newblogpost.component';
 import { ScrollToModule } from 'ng2-scroll-to-el';
 import { ServicesComponent } from 'src/app/components/services/services.component';
+import { NgxEditorModule } from 'ngx-editor';
 
 @NgModule({
    declarations: [
@@ -45,7 +46,8 @@ import { ServicesComponent } from 'src/app/components/services/services.componen
       RouterModule.forRoot(appRoutes),
       BsDropdownModule.forRoot(),
       FormsModule,
-      ScrollToModule.forRoot()
+      ScrollToModule.forRoot(),
+      NgxEditorModule
    ],
    providers: [
        BlogpostService,

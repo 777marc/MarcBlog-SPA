@@ -30,4 +30,9 @@ export class BlogpostService {
     let options = new RequestOptions({ headers: headers });
     return this.http.post(this.baseUrl + 'blogposts', body, options).catch((error:any) => Observable.throw(error.json().error)).subscribe();
   }
+
+  deletePost(id: number) {
+    return this.http.delete(this.baseUrl + 'blogposts/' + id.toString());
+  }
+  
 }

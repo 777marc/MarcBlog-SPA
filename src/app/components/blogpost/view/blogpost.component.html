@@ -15,8 +15,8 @@
     <div [innerHTML]="blogpost?.body"></div>
     <hr>
     <div class="row">
-      <p><i class="fa fa-share"></i>&nbsp;share&nbsp;|&nbsp;</p>
-      <p><i class="fa fa-comment"></i>&nbsp;comments&nbsp;|&nbsp;</p>
-      <a *ngIf="loggedIn()" [routerLink]="['/blog/new',blogpost.id]"><i class="fa fa-edit"></i>edit</a>
+      <button><i class="fa fa-share"></i> share</button>&nbsp;
+      <button><i class="fa fa-comments"></i> comments</button>&nbsp;
+      <button *ngIf="loggedIn()" (click)="editBlogPost(blogpost.id)"><i class="fa fa-edit"></i> edit</button>
     </div>
 </div>

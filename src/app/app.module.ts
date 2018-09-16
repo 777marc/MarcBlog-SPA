@@ -24,6 +24,8 @@ import { NewblogpostComponent } from 'src/app/components/blogpost/new/newblogpos
 import { ScrollToModule } from 'ng2-scroll-to-el';
 import { ServicesComponent } from 'src/app/components/services/services.component';
 import { NgxEditorModule } from 'ngx-editor';
+import { BlogpostResolver } from 'src/app/_resolvers/blogpost-resolver';
+import { BlogpostsResolver } from 'src/app/_resolvers/blogposts-resolver';
 
 @NgModule({
    declarations: [
@@ -53,7 +55,9 @@ import { NgxEditorModule } from 'ngx-editor';
        BlogpostService,
        AuthService,
        AlertifyService,
-       AuthGuard
+       AuthGuard,
+       BlogpostsResolver,
+       BlogpostResolver
    ],
    bootstrap: [
       AppComponent

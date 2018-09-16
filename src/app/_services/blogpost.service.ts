@@ -16,11 +16,13 @@ export class BlogpostService {
   }
 
   getPosts() {
-    return this.http.get(this.baseUrl + 'blogposts');
+    return this.http.get(this.baseUrl + 'blogposts')
+                    .map(response => <Blogpost[]>response.json());
   }
 
   getPost(id: number) {
-    return this.http.get(this.baseUrl + 'blogposts/' + id.toString());
+    return this.http.get(this.baseUrl + 'blogposts/' + id)
+                    .map(response => <Blogpost>response.json());
   }
 
   addNewPost(model: Blogpost) {

@@ -25,7 +25,7 @@ export class AdminComponent implements OnInit {
 
   ListBlogPosts() {
     this.blogpostService.getPosts().subscribe( result => {
-      this.blogPosts = result.json();
+      this.blogPosts = result;
     });    
   }
 

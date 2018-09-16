@@ -26,12 +26,9 @@ export class BlogpostComponent implements OnInit {
   }
 
   getPost(id: number) {
-    this.blogpostService.getPost(id).subscribe(result => {
-      this.blogpost = result.json();
-    }, error => {
-      console.log(error);
+    this.activatedRoute.data.subscribe(data => {
+      this.blogpost = data['blogpost'];
     });
-
   }
 
   loggedIn() {

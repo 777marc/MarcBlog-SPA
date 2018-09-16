@@ -29,7 +29,7 @@ export class NewblogpostComponent implements OnInit {
 
   getPost(id: number) {
     this.blogpostSevice.getPost(id).subscribe(result => {
-      this.model = result.json();
+      this.model = result;
     }, error => {
       console.log(error);
     });

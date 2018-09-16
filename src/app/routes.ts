@@ -10,14 +10,16 @@ import { AdminComponent } from 'src/app/components/admin/admin.component';
 import { AuthGuard } from 'src/app/_guards/auth.guard';
 import { NewblogpostComponent } from 'src/app/components/blogpost/new/newblogpost.component';
 import { ServicesComponent } from 'src/app/components/services/services.component';
+import { BlogpostResolver } from 'src/app/_resolvers/blogpost-resolver';
+import { BlogpostsResolver } from 'src/app/_resolvers/blogposts-resolver';
 
 export const appRoutes: Routes = [
-    { path: 'home', component: HomeComponent },
+    { path: 'home', component: HomeComponent, resolve: {blogposts: BlogpostsResolver}},
     { path: 'about', component: AboutComponent },
     { path: 'projects', component: ProjectsComponent },
     { path: 'contact', component: ContactComponent },
     { path: 'services', component: ServicesComponent },
-    { path: 'blogpost/:id', component: BlogpostComponent },
+    { path: 'blogpost/:id', component: BlogpostComponent, resolve: {blogpost: BlogpostResolver}},
     { path: 'admin/login', component: LoginComponent },
     {
         path: '',

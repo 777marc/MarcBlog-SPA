@@ -1,5 +1,6 @@
 body {
     font-family: 'Abel', sans-serif;
+    font-size: large;
     margin-top: 63px;
 }
 
@@ -7,6 +8,7 @@ html {
     position: relative;
     min-height: 100%;
 }
+
 .parallax {
     /* The image used */
     background-image: url("../images/bg-masthead.jpg");
@@ -17,3 +19,10 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.div-tech-blk {
+    padding: 25px;
+    background: rgba(10, 10, 10, 0.7);
+    margin: 25px;
+    font-size: 22px;
+ }

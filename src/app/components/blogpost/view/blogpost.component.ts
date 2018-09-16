@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Blogpost } from '../../../_models/Blogpost';
 import { BlogpostService } from '../../../_services/blogpost.service';
 import { ActivatedRoute, Params } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-blogpost',
@@ -10,7 +11,9 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class BlogpostComponent implements OnInit {
 
-  constructor(private blogpostService : BlogpostService, private activatedRoute: ActivatedRoute) { }
+  constructor(private blogpostService : BlogpostService, 
+              private activatedRoute: ActivatedRoute,
+              private router: Router) { }
 
   private id: number;
   public blogpost: Blogpost; 
@@ -30,4 +33,14 @@ export class BlogpostComponent implements OnInit {
     });
 
   }
+
+  loggedIn() {
+    const token = localStorage.getItem('token');
+    return !!token;
+  }
+  
+  editBlogPost(id: number) {
+    this.router.navigate(['/blog/new'],{ queryParams: {id: id}});
+  }
+
 }

@@ -6,7 +6,7 @@
 
 <div class="div-post-container parallax">
     <div class="div-post" *ngFor="let post of posts">
-        <div class="panel panel-default">
+        <div>
             <div class="panel-heading"><h3>{{post?.title}}</h3></div>
             <div class="panel-body">{{post?.description}}
               <a class="nav-link"  [routerLink]="['/blogpost', post?.id]">read more...</a>

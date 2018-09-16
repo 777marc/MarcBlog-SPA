@@ -25,7 +25,7 @@ export const appRoutes: Routes = [
         canActivate: [AuthGuard],
         children: [
           {path: 'admin', component: AdminComponent},
-          {path: 'blog/new', component: NewblogpostComponent}
+          {path: 'blog/new', component: NewblogpostComponent},
         ]
      },
     { path: '**', redirectTo: 'home', pathMatch: 'full' },

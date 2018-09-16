@@ -36,7 +36,7 @@ export class AdminComponent implements OnInit {
   }
 
   EditBlogPost(id: number) {
-
+    this.router.navigate(['/blog/new'],{ queryParams: {id: id}});
   }
 
 }

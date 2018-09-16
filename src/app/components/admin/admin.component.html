@@ -1,11 +1,8 @@
 <div class="container">
     <div class="row">
-      <div class="col-sm">
-          <button type="button" class="btn btn-primary" (click)="NewBlogPost()">New Blog Post</button>
-      </div>
-      <div class="col-sm">
-          <button type="button" class="btn btn-info">Manage Email Lists</button>
-      </div>
+        <button type="button" (click)="NewBlogPost()">New Blog Post</button>
+        &nbsp;
+        <button type="button">Manage Email Lists</button>
     </div>
     <hr>
     <h3>Current Posts:</h3>
@@ -27,16 +24,10 @@
                 <td>{{ post.title }}</td>
                 <td>{{ post.description }}</td>
                 <td>
-                    <button (click)="EditBlogPost(post.id)" 
-                            class="btn btn-info">
-                            x
-                    </button>
+                    <button (click)="EditBlogPost(post.id)">edit</button>
                 </td>
                 <td>
-                    <button (click)="DeleteBlogPost(post.id)" 
-                            class="btn btn-danger">
-                            x
-                    </button>
+                    <button (click)="DeleteBlogPost(post.id)">delete</button>
                 </td>
                 
             </tr>

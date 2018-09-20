@@ -6,6 +6,10 @@
 .div-post-container {
     padding: 20px;
     margin-top: 25px;
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .div-post {
@@ -14,4 +18,13 @@
     background: rgba(252, 252, 252, 0.9);
     margin: 25px;
     font-weight: bolder;
+}
+
+li {
+    font-size: larger;
+}
+
+.post-card {
+    width: 50px;
+    height: 50px;
 }

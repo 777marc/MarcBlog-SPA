@@ -12,7 +12,7 @@ import { Blogpost } from 'src/app/_models/Blogpost';
 })
 export class NewblogpostComponent implements OnInit {
 
-  model: any ={};
+  model: any = {};
   id: number;
 
   constructor(private blogpostSevice: BlogpostService, 
@@ -23,7 +23,9 @@ export class NewblogpostComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.queryParams.subscribe((params: Params) => {
       this.id = params['id'];
-      this.getPost(this.id);
+      if(this.id) {
+        this.getPost(this.id);
+      }
     });
   };
 
@@ -37,7 +39,10 @@ export class NewblogpostComponent implements OnInit {
 
   submitPost() {
 
-    if(!this.id) {
+    console.log('id',this.id);
+
+    if(typeof this.id === 'undefined') {
+      console.log('new');
       this.blogpostSevice.addNewPost(this.model);
     }
     else {

@@ -4,8 +4,6 @@
       <a class="p-2 text-dark" [routerLink]="['/about']">About</a>
       <a class="p-2 text-dark" [routerLink]="['/services']">Services</a>
       <a class="p-2 text-dark" [routerLink]="['/contact']">Contact</a>
-      <a class="p-2 text-dark" href="https://www.linkedin.com/in/marc-mendoza-51a6b06/" target="_blank"><i class="fa fa-linkedin"></i></a>
-      <a class="p-2 text-dark" href="https://github.com/777marc" target="_blank"><i class="fa fa-github-alt"></i></a>
       <a *ngIf="!loggedIn()" class="p-2 text-dark" [routerLink]="['/admin/login']"><i class="fa fa-lock"></i></a>
       <a *ngIf="loggedIn()" class="p-2 text-dark" (click)="logout()"><i class="fa fa-unlock"></i></a>
       <a *ngIf="loggedIn()" class="p-2 text-dark" [routerLink]="['/admin']"><i class="fa fa-list"></i></a>

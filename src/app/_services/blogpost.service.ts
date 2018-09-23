@@ -2,7 +2,7 @@ import { Injectable, Inject } from '@angular/core';
 import { Http, RequestOptions, Headers } from '@angular/http';
 import { Blogpost } from '../_models/Blogpost';
 import 'rxjs/add/operator/catch';
-import { Observable } from "rxjs/Observable";
+import { Observable } from 'rxjs/Observable';
 
 @Injectable({
   providedIn: 'root'

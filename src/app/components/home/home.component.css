@@ -1,8 +1,3 @@
-.div-main {
-    padding: 40px;
-    margin-top: 20px;
-}
-
 .div-post-container {
     padding: 20px;
     margin-top: 25px;
@@ -12,19 +7,53 @@
     flex-wrap: wrap;
 }
 
-.div-post {
-    padding: 25px;
-    background-color: white;
-    background: rgba(252, 252, 252, 0.9);
-    margin: 25px;
+.overlay-card{
+    background-color:#222;
+    background-image: url("../../../assets/images/bg-masthead.jpg");
+    background-size: 325px;
+    height:240px;
+    padding-top:25px;
+}
+  
+h5{
+    color:white;
+    font-size: x-large;
     font-weight: bolder;
 }
 
-li {
-    font-size: larger;
-}
+  .btn.btn-follow {
+    border-radius: 15px;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+    margin: 5px;
+    color: white;
+  }
+    
+  .img-rounded{
+      border-radius:100px;
+      height:100px;
+      width:100px;
+      margin-bottom:10px;
+  }
+  
+  .panel.panel-default{
+    border:none;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+  }
+  
+  .panel-body{
+    padding:20px;
+  }
 
-.post-card {
-    width: 50px;
-    height: 50px;
-}
+  .truncate {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .panel-bottom {
+    margin-bottom: 15px;
+  }

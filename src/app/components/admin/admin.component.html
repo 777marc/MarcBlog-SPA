@@ -1,36 +1,47 @@
-<div class="container">
-    <div class="row">
-        <button type="button" (click)="NewBlogPost()">New Blog Post</button>
-        &nbsp;
-        <button type="button">Manage Email Lists</button>
-    </div>
-    <hr>
-    <h3>Current Posts:</h3>
-    <br>
-          
-    <p *ngIf="!blogPosts"><em>Loading...</em></p>
-    
-    <table class='table' *ngIf="blogPosts">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Title</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let post of blogPosts">
-                <td>{{ post.id }}</td>
-                <td>{{ post.title }}</td>
-                <td>{{ post.description }}</td>
-                <td>
-                    <button (click)="EditBlogPost(post.id)">edit</button>
-                </td>
-                <td>
-                    <button (click)="DeleteBlogPost(post.id)">delete</button>
-                </td>
+<div class="card">
+    <div class="card-body">
+            <div class="container">
+                    <div class="row">
+                        <button type="button" (click)="NewBlogPost()">New Blog Post</button>
+                        &nbsp;
+                        <button type="button">Manage Email Lists</button>
+                    </div>
+                    <hr>
+                    <h3>Current Posts:</h3>
+                    <br>
+                          
+                    <p *ngIf="!blogPosts"><em>Loading...</em></p>
+                    
+                    <table class='table' *ngIf="blogPosts">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Title</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let post of blogPosts">
+                                <td>{{ post.id }}</td>
+                                <td>{{ post.title }}</td>
+                                <td>{{ post.description }}</td>
+                                <td>
+                                    <button (click)="EditBlogPost(post.id)">edit</button>
+                                </td>
+                                <td>
+                                    <button (click)="DeleteBlogPost(post.id)">delete</button>
+                                </td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 
-            </tr>
-        </tbody>
-    </table>
-  </div>
+
+
+
+    </div>
+</div>
+
+
+  

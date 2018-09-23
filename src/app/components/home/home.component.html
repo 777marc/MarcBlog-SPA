@@ -1,21 +1,83 @@
-
-<div class="text-white parallax div-main">
-    <ul>
-        <li>Site Design</li>
-        <li>Database Design</li>
-        <li>This is really busy</li>
-    </ul>
+<div class="div-post-container">
 </div>
 
-<div class="div-post-container parallax">
-    <div class="div-post" *ngFor="let post of posts" layout="row" layout-wrap>
-        <div>
-            <div class="panel-heading"><h3>{{post.title}}</h3></div>
-            <div class="panel-body">{{post.description}}
-              <a class="nav-link"  [routerLink]="['/blogpost', post.id]">read more...</a>
+
+<div class="row">
+    
+    <!-- RIGHT ABOUT  -->
+    <div class="col-md-3">
+        <div class="panel panel-default">
+            <div class="overlay-card  text-center">
+                <img src="../../../assets/images/70879.jpg" class="img-rounded center-block">
+                <div class="row" style="padding-left:80px; padding-top:20px;">
+                    <h5>Marc Mendoza</h5>
+                </div>                       
+            </div>
+            <div class="panel-body text-center">
+                <p>Principal Developer - Founder</p>
+                <a class="p-2 text-dark" href="https://www.linkedin.com/in/marc-mendoza-51a6b06/" target="_blank">
+                    <button class="btn btn-circle btn-secondary"><i class="fa fa-linkedin"></i></button>    
+                </a>
+                <a class="p-2" href="https://github.com/777marc" target="_blank">
+                    <button class="btn btn-circle btn-secondary"><i class="fa fa-github"></i></button>    
+                </a>
+                <a class="p-2 text-dark" href="mailto:marcmendoza@outlook.com">
+                    <button class="btn btn-circle btn-secondary"><i class="fa fa-envelope"></i></button>    
+                </a>
             </div>
         </div>
     </div>
-</div>
+
+    <!-- CENTER BLOG FEED -->
+    <div class="col-md-6">
+        <div *ngFor="let post of posts">
+            <div class="panel panel-default panel-bottom">
+                <div class="card-body">
+                    <h3 class="card-title">{{post.title}}</h3>
+                    <h4 class="card-text">{{post.description}}</h4>
+                    <p class="card-text"><i class="fa fa-angle-double-right"></i> {{post.category}}</p>
+                    <p class="truncate">{{post.body}}</p>
+                    <a class="nav-link"  [routerLink]="['/blogpost', post.id]"><i class="fa fa-book"></i> read more</a>
+                </div>
+            </div>
+        </div>  
+    </div>
+    
+    <!-- LEFT MISC INFO -->
+    <div class="col-md-3">
+        <div class="panel panel-default panel-bottom">
+            <div class="card-body">
+              <h3 class="card-title">Project Name</h3>
+              <h6 class="card-subtitle mb-2 text-muted">A mobile app</h6>
+              <p class="card-text">This app helps you do something cool and helps me write better code that people can use to make their lives better</p>
+              <a href="#" class="card-link">Source Code</a>
+              <a href="#" class="card-link">Live Demo</a>
+            </div>
+        </div>      
+
+
+        <div class="panel panel-default panel-bottom">
+                <div class="card-body">
+                  <h3 class="card-title">Project Name #2</h3>
+                  <h6 class="card-subtitle mb-2 text-muted">A mobile app</h6>
+                  <p class="card-text">This app helps you do something cool and helps me write better code that people can use to make their lives better</p>
+                  <a href="#" class="card-link">Source Code</a>
+                  <a href="#" class="card-link">Live Demo</a>
+                </div>
+        </div>      
+    
+        <div class="panel panel-default panel-bottom">
+                <div class="card-body">
+                  <h3 class="card-title">Project Name # 3</h3>
+                  <h6 class="card-subtitle mb-2 text-muted">A mobile app</h6>
+                  <p class="card-text">This app helps you do something cool and helps me write better code that people can use to make their lives better</p>
+                  <a href="#" class="card-link">Source Code</a>
+                  <a href="#" class="card-link">Live Demo</a>
+                </div>
+        </div>      
+
+
+    </div>
+  </div>
 
   

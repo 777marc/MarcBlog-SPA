@@ -14,6 +14,7 @@ export class NewblogpostComponent implements OnInit {
 
   model: any = {};
   id: number;
+  pageTitle: string;
 
   constructor(private blogpostSevice: BlogpostService, 
               private alertify: AlertifyService, 
@@ -25,6 +26,10 @@ export class NewblogpostComponent implements OnInit {
       this.id = params['id'];
       if(this.id) {
         this.getPost(this.id);
+        this.pageTitle = 'Edit Blog Post';
+      }
+      else {
+        this.pageTitle = 'New Blog Post';
       }
     });
   };

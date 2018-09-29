@@ -17,6 +17,7 @@ export class BlogpostComponent implements OnInit {
 
   private id: number;
   public blogpost: Blogpost; 
+  public likes: number;
 
   ngOnInit() {
     this.activatedRoute.params.subscribe((params: Params) => {
@@ -28,6 +29,7 @@ export class BlogpostComponent implements OnInit {
   getPost(id: number) {
     this.activatedRoute.data.subscribe(data => {
       this.blogpost = data['blogpost'];
+      this.likes = this.blogpost.likes;
     });
   }
 
@@ -38,6 +40,11 @@ export class BlogpostComponent implements OnInit {
   
   editBlogPost(id: number) {
     this.router.navigate(['/blog/new'],{ queryParams: {id: id}});
+  }
+
+  addLike(id: number) {
+    this.blogpostService.addLike(id);
+    this.likes = this.likes + 1;
   }
 
 }

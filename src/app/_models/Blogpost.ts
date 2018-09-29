@@ -7,6 +7,7 @@ export class Blogpost {
         public category: string,
         public dateCreated: Date,
         public description: string,
-        public title: string
+        public title: string,
+        public likes: number
     ) {}
 }

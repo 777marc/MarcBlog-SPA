@@ -43,11 +43,7 @@ export class NewblogpostComponent implements OnInit {
   }
 
   submitPost() {
-
-    console.log('id',this.id);
-
     if(typeof this.id === 'undefined') {
-      console.log('new');
       this.blogpostSevice.addNewPost(this.model);
     }
     else {

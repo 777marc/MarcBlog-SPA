@@ -26,6 +26,15 @@
                  [(ngModel)]="model.category">
       </div>
 
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Likes</span>
+        </div>
+        <input type="text" 
+               class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"
+               [(ngModel)]="model.likes">
+      </div>
+
       <app-ngx-editor [placeholder]="'Enter text here...'" [height]="200" [spellcheck]="true" [(ngModel)]="model.body"></app-ngx-editor>
       
       <button type="button" (click)="submitPost()">Submit Post</button>

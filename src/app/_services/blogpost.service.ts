@@ -35,7 +35,6 @@ export class BlogpostService {
   }
 
   editPost(model: Blogpost) {
-    console.log(model);
     let body = JSON.stringify(model);
     let headers = new Headers({ 'Content-Type': 'application/json' });
     headers.append('Accept', 'application/json');
@@ -48,4 +47,14 @@ export class BlogpostService {
     return this.http.delete(this.baseUrl + 'blogposts/' + id.toString());
   }
   
+  addLike(id: number) {
+    console.log(id);
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    headers.append('Accept', 'application/json');
+    let options = new RequestOptions({ headers: headers });
+    return this.http.post(this.baseUrl + 'blogposts/' + id, null, options)
+                    .catch((error:any) => Observable.throw(error.json().error)).subscribe();
+
+  }
+
 }

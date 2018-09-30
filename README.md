@@ -4,3 +4,4 @@ Upcoming enhancements:
 1. Post Sharing
 2. Comments
 3. Analytics
+4. Likes

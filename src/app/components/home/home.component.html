@@ -36,7 +36,8 @@
                     <h3 class="card-title">{{post.title}}</h3>
                     <h4 class="card-text">{{post.description}}</h4>
                     <p class="card-text"><i class="fa fa-angle-double-right"></i> {{post.category}}</p>
-                    <p class="truncate">{{post.body}}</p>
+                    <div class="truncate" [innerHTML]="post.body"></div>
+                    <!-- <p class="truncate">{{post.body}}</p> -->
                     <a class="nav-link"  [routerLink]="['/blogpost', post.id]"><i class="fa fa-book"></i> read more</a>
                 </div>
             </div>

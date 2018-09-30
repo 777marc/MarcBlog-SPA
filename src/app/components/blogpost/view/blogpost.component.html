@@ -8,11 +8,10 @@
       <p class="blog-post-meta">{{ blogpost?.dateCreated | date }} by <a [routerLink]="['/about']">{{ blogpost?.author }}</a></p>
       <hr>
       <div [innerHTML]="blogpost?.body"></div>
-
+      <hr>
       <div class="row">
         <span class="dot"><i class="fa fa-heart heart"></i> {{ likes }} </span>
       </div>
-     
       <hr>
       <div class="row">
         <button (click)="addLike(blogpost.id)"><i class="fa fa-heart"></i> Like</button>&nbsp;

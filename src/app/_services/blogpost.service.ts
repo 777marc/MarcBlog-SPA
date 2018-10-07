@@ -3,6 +3,7 @@ import { Http, RequestOptions, Headers } from '@angular/http';
 import { Blogpost } from '../_models/Blogpost';
 import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Observable';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class BlogpostService {
   private baseUrl : string;
 
   constructor(private http: Http) { 
-    this.baseUrl = 'http://localhost:5000/api/';
+    this.baseUrl = environment.apiUrl;
   }
 
   getPosts() {
